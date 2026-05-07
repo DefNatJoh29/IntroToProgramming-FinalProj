@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortFolio Reimagined</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +13,21 @@
     <nav>
         <div class="nav-container">
             <div class="nav-content">
-                <a href="#" class="logo"></a>
+                <a href="#" class="logo">
+                    <div class="logo-circle">🎾</div>
+                    <span class="logo-name heading-font">Nate Johns</span>
+                </a>
+                <div class="nav-menu">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#stats" class="nav-link">Player Stats</a>
+                    <a href="#search" class="nav-link">Explore players</a>
+                    <a href="#contact" class="nav-link">About</a>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="#" class="btn-resume">Resume</a>
+                    <a href="#contact" class="btn-contact">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -20,7 +35,11 @@
     <!-- header section -->
     <header class="hero">
         <h1 class="hero-title heading-font">NATE<br>JOHNS</h1>
-        <p class="hero-subtitle">Self Portfolio and tennis stats</p>
+        <p class="hero-subtitle">Self portfolio and tennis stats</p>
+        <div class="hero-buttons">
+            <a href="#about" class="btn btn-primary">My stuff</a>
+            <a href="#about" class="btn btn-secondary">Explore more</a>
+        </div>
     </header>
     <!-- end of header -->
 </body>
