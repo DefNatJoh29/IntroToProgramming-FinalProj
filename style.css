@@ -87,11 +87,114 @@ nav {
     font-weight: 600;
     text-decoration: none;
 }
+/* hero stuff over here bruh */
 
+.hero-title{
+    font-size: 4.5rem;
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -4px;
+    margin-bottom: 16px;
+}
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), 
+    url('https://images.unsplash.com/photo-1542144582-1ba00456b5e3') center/cover no-repeat; /* used gpt for this line (due to lack of knowledge)*/
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero-content{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #d2d2da;
+    max-width: 400px;
+    margin: 0 auto;
+}
+/* hero buttons */
+.hero-buttons{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top:48px;
+    flex-wrap: wrap-reverse;
+}
+.btn{
+    padding: 16px 32px;
+    border-radius:100px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.btn-primary{
+    background: white;
+    color: #09090a;
+}
+.btn-primary:hover{
+    background: #ffd035;
+}
+.btn-secondary{
+    border: 1px solid rgba(255, 235, 235, 0.7);
+    color: white;
+}
+.btn-secondary:hover{
+    background: rgba(255,255,255,0.1);
+}
+/* sections */
+
+.about-sticky{
+    position: sticky;
+    top: 100px;
+}
+.section-label {
+    color: #d97706;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+.section-title{
+    font-size: 48px;
+    letter-spacing: -2px;
+    margin: 12px 0 24px;
+}
+.about-bio{
+    color:#3e3e45;
+    font-size: 18px;
+    line-height: 1.7;
+}
+.about-bio p + p {
+    margin-top: 1em;
+}
+.about-numbers{
+    margin-top: 48px;
+    display: flex;
+    gap: 48px;
+}
+.about-number-value{
+    font-size: 42px;
+    font-weight: 600;
+}
+.about-number-label{
+    color:#696971;
+    font-size: 14px;
+}
 /* media queries */
 
 @media(min-width: 768px){
-    .nav-menu{
+    .nav-menu {
         display: flex;
+    }
+    .hero-title{
+        font-size: 5.5rem;
     }
 }
