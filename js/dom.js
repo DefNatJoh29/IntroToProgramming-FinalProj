@@ -5,36 +5,6 @@ const favListContainer = document.querySelector("#favlist-container")
 const removeBtn = document.querySelector("#clear-all-btn")
 const favListCount = document.querySelector("#favlist-count")
 
-
-
-
-// Event listener park
-
-// click event on remove button
-// click event on submit button
-// keydown (enter key) event on search even
-
-// ========== EVENT LISTENERS ==========
-
-
-searchBtn.addEventListener("click", fetchFavs)
-
-searchInput.addEventListener("keypress", function(e) {
-    if (e.key === "Enter") {
-        fetchFavs()
-    }
-})
-
-removeBtn.addEventListener("click", clearAllfavList)
-
-
-loadfavlist()
-
-
-
-
-
-
 let favList = []
 let currentResults = []
 
@@ -54,18 +24,23 @@ function savefavlist() {
         "tennisFavlist",
         JSON.stringify(favList)
     )
+
     updatefavListCount()
 }
 
 function fetchFavs() {
+
     const query = searchInput.value.trim()
+
     if (query === "") {
         resultsContainer.innerHTML =
             '<div class="empty-state">Please enter a tennis player name!</div>'
         return
     }
+
     resultsContainer.innerHTML =
         '<div class="empty-state">Loading...</div>'
+
     const url =
         "https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=" + query
 
@@ -74,6 +49,7 @@ function fetchFavs() {
             return response.json()
         })
         .then(function(data) {
+
             if (!data.player) {
                 resultsContainer.innerHTML =
                     '<div class="empty-state">No players found!</div>'
@@ -81,24 +57,19 @@ function fetchFavs() {
             }
 
             const tennisPlayers = data.player.filter(function(player) {
+                return player.strSport === "Tennis"
+            })
 
-            if (player.strSport !== "Tennis") {
-                return false
-            }
-            const playerName =
-                player.strPlayer.toLowerCase()
-            const searchTerm =
-                query.toLowerCase()
-            return playerName.includes(searchTerm)
-        })
             currentResults = tennisPlayers
 
             displayPlayers(tennisPlayers)
         })
 }
+
 function displayPlayers(data) {
 
     resultsContainer.innerHTML = ""
+
     if (data.length === 0) {
         resultsContainer.innerHTML =
             '<div class="empty-state">No tennis players found!</div>'
@@ -115,7 +86,9 @@ function displayPlayers(data) {
         if (player.strThumb) {
             imageUrl = player.strThumb
         }
+
         let isSaved = false
+
         for (let j = 0; j < favList.length; j++) {
 
             if (favList[j].id === player.idPlayer) {
@@ -123,6 +96,7 @@ function displayPlayers(data) {
                 break
             }
         }
+
         const heartIcon = isSaved
             ? "❤️ Saved"
             : "🤍 Save"
@@ -140,6 +114,7 @@ function displayPlayers(data) {
                 <button class="heart-btn">${heartIcon}</button>
             </div>
         `
+
         resultsContainer.appendChild(card)
 
         const heartBtn = card.querySelector(".heart-btn")
@@ -151,6 +126,7 @@ function displayPlayers(data) {
 }
 
 function renderfavList() {
+
     if (favList.length === 0) {
 
         favListContainer.innerHTML = `
@@ -161,20 +137,24 @@ function renderfavList() {
 
         return
     }
+
     favListContainer.innerHTML = ""
 
     for (let i = 0; i < favList.length; i++) {
 
         const player = favList[i]
+
         let imageUrl =
             player.image ||
             "https://placehold.co/300x200?text=No+Image"
+
         const card = document.createElement("div")
 
         card.className = "watchlist-card"
+
         card.innerHTML = `
             <img src="${imageUrl}" alt="${player.name}">
-          
+            
             <div class="info">
                 <h3>${player.name}</h3>
                 <button class="remove-btn">
@@ -182,6 +162,7 @@ function renderfavList() {
                 </button>
             </div>
         `
+
         favListContainer.appendChild(card)
 
         const removeBtn = card.querySelector(".remove-btn")
@@ -221,21 +202,28 @@ function togglefavList(player) {
                 newfavList.push(favList[i])
             }
         }
+
         favList = newfavList
 
     } else {
+
         let imageUrl = null
+
         if (player.strThumb) {
             imageUrl = player.strThumb
         }
+
         favList.push({
             id: player.idPlayer,
             name: player.strPlayer,
             image: imageUrl
         })
     }
+
     savefavlist()
+
     renderfavList()
+
     displayPlayers(currentResults)
 }
 
@@ -257,13 +245,19 @@ function clearAllfavList() {
     if (favList.length === 0) {
         return
     }
+
     const confirmed = confirm(
         `Remove all ${favList.length} saved players?`
     )
+
     if (confirmed) {
+
         favList = []
+
         savefavlist()
+
         renderfavList()
+
         if (currentResults.length > 0) {
             displayPlayers(currentResults)
         }
@@ -272,5 +266,22 @@ function clearAllfavList() {
 
 
 
+// Event listener park
 
+// click event on remove button
+// click event on submit button
+// keydown (enter key) event on search even
 
+// ========== EVENT LISTENERS ==========
+
+searchBtn.addEventListener("click", fetchFavs)
+
+searchInput.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        fetchFavs()
+    }
+})
+
+removeBtn.addEventListener("click", clearAllfavList)
+
+loadfavlist()
