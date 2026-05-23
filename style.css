@@ -70,7 +70,7 @@ nav {
     align-items: center;
     gap: 16px;
 }
-.btn-dark-mode{
+#theme-toggle{
     padding: 10px 20px;
     border: 1px solid;
     border-color: #d1d1d8;
@@ -81,6 +81,15 @@ nav {
     color: inherit;
 }
 .btn-contact{
+    padding: 10px 24px;
+    background: #18181b;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    font-weight: 600;
+    text-decoration: none;
+}
+#bad-mode-toggle{
     padding: 10px 24px;
     background: #18181b;
     color: white;

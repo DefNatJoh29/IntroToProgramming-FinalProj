@@ -1,0 +1,97 @@
+body.dark-mode {
+    font-family:'Inter', system-ui, sans-serif;
+    background-color: #ffffff;
+    color: #111010;
+    line-height: 1.6;
+}
+body.dark-mode nav {
+    background: rgb(0, 0, 0);
+    border-bottom: 1px solid #000028;
+    position: sticky;
+    top:0;
+    z-index: 50;
+}
+body.dark-mode .nav-link{
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+body.dark-mode .nav-link:hover {
+    color: #a1a1a1
+}
+body.dark-mode .logo-name{
+    color: #ffffff;
+}
+body.dark-mode .hero-subtitle {
+    font-size: 1.5rem;
+    color: #0f0f0f;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+body.dark-mode .btn-primary{
+    background: rgb(103, 92, 67);
+    color: #09090a;
+}
+body.dark-mode .btn-primary:hover{
+    background: #ffd035;
+}
+body.dark-mode .btn-secondary{
+    border: 1px solid rgba(155, 155, 155, 0.7);
+    color: rgb(0, 0, 0);
+}
+body.dark-mode .btn-secondary:hover{
+    background: rgba(213, 206, 206, 0.554);
+}
+body.dark-mode .hero-title{
+    color: #ffffff;
+}
+body.dark-mode .section-label {
+    color: #54320b;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+body.dark-mode .about-bio{
+    color:#f8f8ff;
+    font-size: 18px;
+    line-height: 1.7;
+}
+body.dark-mode #about{
+    background-color: #000028;
+}
+body.dark-mode .about-bio p + p {
+    margin-top: 1em;
+    color: #ffffff;
+}
+body.dark-mode .about-numbers{
+    margin-top: 48px;
+    display: flex;
+    gap: 48px;
+    color: #f8f8ff;
+}
+body.dark-mode .about-number-value{
+    font-size: 22px;
+    font-weight: 600;
+    color: #f8f8ff;
+}
+body.dark-mode .about-number-label{
+    color:#cbcbcb;
+    font-size: 14px;
+}
+body.dark-mode .dark-card {
+    background: #ffffff;
+    color: black;
+}
+
+body.dark-mode .light-card {
+    background: rgb(0, 0, 0);
+    border: 1px solid #000000;
+    color: white;
+}
+body.dark-mode .fav-card {
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    overflow: hidden;
+}

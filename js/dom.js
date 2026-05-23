@@ -285,3 +285,4 @@ searchInput.addEventListener("keypress", function(e) {
 removeBtn.addEventListener("click", clearAllfavList)
 
 loadfavlist()
+
