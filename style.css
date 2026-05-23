@@ -387,23 +387,48 @@ h2 {
 }
 
 /* Watchlist Card */
-.favlist-card {
-    background: #161B22;
+.show-card {
+    background: #efefef;
     border: 1px solid #acacac;
     border-radius: 12px;
     overflow: hidden;
 }
-.favlist-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.show-card img {
+    width: 50%;
+    height: 120px;
+    border-radius: 12px;
 }
 
-.favlist-card .info {
+.show-card .info {
     padding: 12px;
 }
 
-.favlist-card h3 {
+.show-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+
+
+
+/* watchlist cards */
+.watchlist-card {
+    background: #efefef;
+    border: 1px solid #acacac;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.watchlist-card img {
+    width: 50%;
+    height: 120px;
+    border-radius: 12px;
+}
+
+.watchlist-card .info {
+    padding: 12px;
+}
+
+.watchlist-card h3 {
     font-size: 1rem;
     margin-bottom: 8px;
 }
