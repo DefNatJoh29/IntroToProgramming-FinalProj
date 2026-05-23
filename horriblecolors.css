@@ -1,0 +1,179 @@
+body.bad-mode {
+    font-family:'Inter', system-ui, sans-serif;
+    background-color: #f53333;
+    color: #d47a7a;
+    line-height: 1.6;
+}
+body.bad-mode nav {
+    background: rgb(71, 180, 61);
+    border-bottom: 1px solid #0e0efc;
+    position: sticky;
+    top:0;
+    z-index: 50;
+}
+body.bad-mode .nav-link{
+    color: #ad57db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+body.bad-mode .nav-link:hover {
+    color: #29e200
+}
+body.bad-mode .logo-name{
+    color: #3f3ea8;
+}
+body.bad-mode .hero-subtitle {
+    font-size: 1.5rem;
+    color: #f2ff00;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+body.bad-mode .btn-primary{
+    background: rgb(224, 196, 129);
+    color: #1a1af6;
+}
+body.bad-mode .btn-primary:hover{
+    background: #40d240;
+}
+body.bad-mode .btn-secondary{
+    border: 1px solid rgba(255, 189, 22, 0.7);
+    color: rgb(97, 70, 70);
+}
+body.bad-mode .btn-secondary:hover{
+    background: rgba(223, 255, 15, 0.554);
+}
+body.bad-mode .hero-title{
+    color: #df29e9;
+}
+body.bad-mode .section-label {
+    color: #ff8e0e;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+body.bad-mode .about-bio{
+    color:#13dfc3;
+    font-size: 18px;
+    line-height: 1.7;
+}
+body.bad-mode #about{
+    background-color: #26ffff;
+}
+body.bad-mode .about-bio p + p {
+    margin-top: 1em;
+    color: #cd20e0;
+}
+body.bad-mode .about-numbers{
+    margin-top: 48px;
+    display: flex;
+    gap: 48px;
+    color: #0fcfa9;
+}
+body.bad-mode .about-number-value{
+    font-size: 22px;
+    font-weight: 600;
+    color: #0fa53a;
+}
+body.bad-mode .about-number-label{
+    color:#24ae8be8;
+    font-size: 14px;
+}
+body.bad-mode .dark-card {
+    background: red;
+    color: cyan;
+}
+
+body.bad-mode .light-card {
+    background: bisque;
+    border: 1px solid blue;
+    color: violet
+}
+body.bad-mode .fav-card {
+    background: pink;
+    border: 1px solid blueviolet;
+    border-radius: 12px;
+    overflow: hidden;
+}
+body.bad-mode .empty-state {
+    text-align: center;
+    padding: 40px;
+    color: firebrick;
+}
+body.bad-mode h2 {
+    color: #e89910;
+    margin-top: 40px;
+    padding-left: 16px;
+    border-left: 4px solid #1490e9;
+}
+body.bad-mode .heart-btn {
+    background:none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 8px;
+    color: #2b8ef1;
+    font-family: 'Poppins', sans-serif;
+}
+body.bad-mode .show-card {
+    background: #6f27ff;
+    border: 1px solid #1602c6;
+    border-radius: 12px;
+    overflow: hidden;
+}
+body.bad-mode .show-card img {
+    width: 50%;
+    height: 120px;
+    border-radius: 12px;
+}
+body.bad-mode .watchlist-card {
+    background: #b7d700;
+    border: 1px solid #993fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+body.bad-mode .explore-section-background{
+    background-color: #ff4ad5;
+}
+body.bad-mode #search{
+    color: blue;
+}
+body.bad-mode #first-sector{
+    font-size: 16px;
+    font-weight: 600;
+    color: #d5d5d5;
+    padding-right: 20px;
+}
+body.bad-mode #second-sector{
+    font-size: 16px;
+    font-weight: 600;
+    color: #e5e5e5;
+    padding-right: 20px;
+}
+body.bad-mode #contact{
+    background-color: #000000;
+    color: white;
+}
+body.bad-mode .form-class{
+    background-color: #000000;
+    color: white;
+}
+body.bad-mode .table-form{
+    background-color: #000000;
+    color: white;
+}
+body.bad-mode .form-container{
+    background: #09090a;
+    color: white;
+}
+body.bad-mode .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), 
+    url("https://unsplash.com/photos/stormtrooper-minifigure-walking-on-the-sand-cPF2nlWcMY4") center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    flex-direction: column;
+}

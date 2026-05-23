@@ -95,3 +95,74 @@ body.dark-mode .fav-card {
     border-radius: 12px;
     overflow: hidden;
 }
+body.dark-mode .empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #3c3c3c;
+}
+body.dark-mode h2 {
+    color: #746f6f;
+    margin-top: 40px;
+    padding-left: 16px;
+    border-left: 4px solid #a96059;
+}
+body.dark-mode .heart-btn {
+    background:none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 8px;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+}
+body.dark-mode .show-card {
+    background: #424242;
+    border: 1px solid #3b3b3b;
+    border-radius: 12px;
+    overflow: hidden;
+}
+body.dark-mode .show-card img {
+    width: 50%;
+    height: 120px;
+    border-radius: 12px;
+}
+body.dark-mode .watchlist-card {
+    background: #4e4e4e;
+    border: 1px solid #393939;
+    border-radius: 12px;
+    overflow: hidden;
+}
+body.dark-mode .explore-section-background{
+    background-color: #1f1e1e;
+}
+body.dark-mode #search{
+    color: rgb(255, 255, 255);
+}
+body.dark-mode #first-sector{
+    font-size: 16px;
+    font-weight: 600;
+    color: #d5d5d5;
+    padding-right: 20px;
+}
+body.dark-mode #second-sector{
+    font-size: 16px;
+    font-weight: 600;
+    color: #e5e5e5;
+    padding-right: 20px;
+}
+body.dark-mode #contact{
+    background-color: #000000;
+    color: white;
+}
+body.dark-mode .form-class{
+    background-color: #000000;
+    color: white;
+}
+body.dark-mode .table-form{
+    background-color: #000000;
+    color: white;
+}
+body.dark-mode .form-container{
+    background: #09090a;
+    color: white;
+}

@@ -89,7 +89,7 @@ nav {
     font-weight: 600;
     text-decoration: none;
 }
-#bad-mode-toggle{
+#mode-toggle{
     padding: 10px 24px;
     background: #18181b;
     color: white;
