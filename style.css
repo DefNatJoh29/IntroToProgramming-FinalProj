@@ -39,7 +39,7 @@ nav {
     height: 64px;
 }
 .nav-menu{
-    display: none;
+    display: flex;
     align-items: center;
     gap: 32px;
     font-size: 14px;
@@ -624,14 +624,43 @@ h2 {
     margin-left: 700px;
 }
 
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.mobile-nav{
+    display:none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    color: #09090a;
+}
+.mobile-nav.active{
+    display: flex;
+}
+
 
 /* media queries */
 
-@media(min-width: 768px){
+@media(max-width: 768px){
     .nav-menu {
-        display: flex;
+        display: none;
     }
     .hero-title{
         font-size: 5.5rem;
     }
+
+    .hamburger{
+        display: block;
+    }
 }
+

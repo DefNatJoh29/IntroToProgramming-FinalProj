@@ -1,8 +1,10 @@
 // additional code here
 // toggle dark mode and horrible colors mode
 
-themeBtn = document.querySelector("#theme-toggle")
-badBtn = document.querySelector("#mode-toggle")
+const themeBtn = document.querySelector("#theme-toggle")
+const badBtn = document.querySelector("#mode-toggle")
+const hamburger = document.querySelector(".hamburger")
+const mobileNav = document.querySelector(".mobile-nav")
 
 function toggleDarkMode(){
     document.body.classList.remove("bad-mode")
@@ -19,6 +21,11 @@ themeBtn.addEventListener("click",(e)=>{
     toggleDarkMode(e)
 })
 
+themeBtn.addEventListener("keydown", (e)=>{
+    if((e.key === "d" || e.key === "D")){
+        toggleDarkMode()
+    }
+})
 
 function toggleBadMode(){
     document.body.classList.remove("dark-mode")
@@ -34,4 +41,14 @@ function toggleBadMode(){
 
 badBtn.addEventListener("click",(e)=>{
     toggleBadMode(e)
+})
+
+themeBtn.addEventListener("keydown", (e)=>{
+    if((e.key === "b" || e.key === "B")){
+        toggleBadMode()
+    }
+})
+
+hamburger.addEventListener("click",()=>{
+    mobileNav.classList.toggle("active")
 })
