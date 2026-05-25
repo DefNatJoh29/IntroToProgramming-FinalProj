@@ -648,6 +648,20 @@ h2 {
     display: flex;
 }
 
+.form-feedback{
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    /* font-weight: 600; */
+    text-align: center;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.submit-section{
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
 
 /* media queries */
 
