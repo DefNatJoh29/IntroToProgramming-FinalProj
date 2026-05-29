@@ -43,6 +43,11 @@ function toggleBadMode(){
 
 badBtn.addEventListener("click",(e)=>{
     toggleBadMode(e)
+    themeBtn.textContent = "Dark Mode"
+    if(toggleDarkMode == true){
+        toggleBadMode(e)
+        themeBtn.textContent = "Dark Mode"
+    }
 })
 
 themeBtn.addEventListener("keydown", (e)=>{

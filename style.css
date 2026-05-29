@@ -613,6 +613,9 @@ h2 {
     background-color: #ffffff;
 }
 .btn-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 20px;
     border: 1px solid;
     border-color: #d1d1d8;
@@ -622,6 +625,7 @@ h2 {
     text-decoration: none;
     color: inherit;
     margin-left: 700px;
+    margin: 0 auto;
 }
 
 .hamburger {
