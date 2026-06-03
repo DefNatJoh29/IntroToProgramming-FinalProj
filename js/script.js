@@ -37,7 +37,7 @@ function toggleBadMode(){
     if(document.body.classList.contains('bad-mode')){
         badBtn.textContent = "Good Colors Mode"
     } else {
-        badBtn.textContent = "Bad Colors Mode"
+        badBtn.textContent = "Horrible Colors Mode"
     }
 }
 
@@ -47,6 +47,12 @@ badBtn.addEventListener("click",(e)=>{
     if(toggleDarkMode == true){
         toggleBadMode(e)
         themeBtn.textContent = "Dark Mode"
+    } else {
+        console.log(`you clicked ${e.key}`)
+    }
+    if(toggleBadMode == true){
+        toggleDarkMode(e)
+        themeBtn.textContent = "Horrible Colors Mode"
     }
 })
 
